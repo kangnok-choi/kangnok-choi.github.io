@@ -1,0 +1,65 @@
+site_name: LLM Tech Blog
+site_description: 
+site_url: https://mindu2.github.io
+repo_url: https://github.com/mindu2/mindu2.github.io
+repo_name: mindu2/mindu2.github.io
+edit_uri: edit/main/docs/
+use_directory_urls: true
+
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  font:
+    text: Noto Sans KR
+    code: Fira Code
+
+    
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      type: date
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+  - style/math.js
+  - style/custom.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+  - style/cards.css
+
+nav:
+  - HOME: index.md
+  - CS336:
+      - 개요: cs336/index.md 
+      - 9월 24일: cs336/09_24.md
+  - LLM-Synthetic-Data:
+      - 개요: LLM-Synthetic-Data/index.md
+
+
