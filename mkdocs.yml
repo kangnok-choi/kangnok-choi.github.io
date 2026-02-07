@@ -58,5 +58,7 @@ nav:
   - HOME: index.md
   - Inverse Problem:
       - 개요: inverse_problem/index.md
+  - Posts:
+      - Signal and Noise: _posts/2025-08-23-signal_and_noise/post.md
 
 
