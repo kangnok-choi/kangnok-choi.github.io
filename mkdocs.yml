@@ -90,13 +90,9 @@ extra_javascript:
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
 
-# Wiki 스타일 네비게이션
 nav:
-  - 홈: index.md
-  - Research:
-      - research/index.md
-      - LLM Evaluation:
-          - research/llm-evaluation/signal-and-noise.md
-  - Notes:
-      - notes/index.md
-      - Inverse Problem: notes/inverse-problem.md
+  - Home: index.md
+  - Inverse problem:
+      - inverse_problem/index.md
+      - 01. Introduction: inverse_problem/01.introduction.md
+      - 02. Fredholm Integral Equation: inverse_problem/02.Fredholm_integral_equation.md
