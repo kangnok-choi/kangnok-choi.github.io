@@ -31,6 +31,7 @@ theme:
     - navigation.expand         # 네비게이션 자동 확장
     - navigation.indexes        # 섹션 인덱스 페이지
     - navigation.top            # "맨 위로" 버튼
+    - navigation.footer         # 이전/다음 페이지 버튼
     - toc.follow                # ToC 자동 스크롤
     - search.suggest            # 검색 제안
     - search.highlight          # 검색 결과 하이라이트
