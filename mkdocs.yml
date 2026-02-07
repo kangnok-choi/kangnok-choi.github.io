@@ -1,64 +1,102 @@
-site_name: LLM Tech Blog
-site_description: 
+site_name: 최강녹
+site_description: 최강녹의 지식 위키
 site_url: https://kangnok-choi.github.io
 repo_url: https://github.com/kangnok-choi/kangnok-choi.github.io
 repo_name: kangnok-choi/kangnok-choi.github.io
 edit_uri: edit/main/docs/
-use_directory_urls: true
-
 
 theme:
   name: material
   language: ko
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    # Dark mode  
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
   features:
-    - navigation.tabs
-    - navigation.instant
-    - navigation.tracking
-    - content.code.copy
-    - search.suggest
-    - search.highlight
+    - navigation.instant        # 즉시 로딩
+    - navigation.tracking       # URL 자동 업데이트
+    - navigation.tabs           # 상단 탭
+    - navigation.sections       # 섹션 표시
+    - navigation.expand         # 네비게이션 자동 확장
+    - navigation.indexes        # 섹션 인덱스 페이지
+    - navigation.top            # "맨 위로" 버튼
+    - toc.follow                # ToC 자동 스크롤
+    - search.suggest            # 검색 제안
+    - search.highlight          # 검색 결과 하이라이트
+    - search.share              # 검색 공유
+    - content.code.copy         # 코드 복사 버튼
+    - content.action.edit       # 편집 버튼
+    - content.action.view       # 보기 버튼
+  icon:
+    repo: fontawesome/brands/github
   font:
     text: Noto Sans KR
     code: Fira Code
 
-    
 plugins:
-  - search
-  - glightbox
+  - search:
+      lang: ko
   - git-revision-date-localized:
-      type: date
-  - mermaid2
+      enable_creation_date: true
+      type: datetime
 
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.tabbed
-  - pymdownx.emoji:
+  - admonition                  # 경고/주의 박스
+  - pymdownx.details            # 접을 수 있는 섹션
+  - pymdownx.superfences:       # 코드 블록, 다이어그램
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:         # 코드 하이라이트
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite       # 인라인 코드 하이라이트
+  - pymdownx.snippets           # 파일 임베드
+  - pymdownx.tabbed:            # 탭
+      alternate_style: true
+  - pymdownx.tasklist:          # 체크리스트
+      custom_checkbox: true
+  - pymdownx.emoji:             # 이모지
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - toc:
+  - tables                      # 테이블
+  - footnotes                   # 각주
+  - toc:                        # 목차
       permalink: true
-  - pymdownx.arithmatex:
+      toc_depth: 3
+  - attr_list                   # 속성 추가
+  - md_in_html                  # HTML 내 마크다운
+  - pymdownx.arithmatex:        # 수식
       generic: true
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
-  - style/math.js
-  - style/custom.js
+  - javascripts/mathjax.js
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
-  - style/cards.css
 
+# Wiki 스타일 네비게이션
 nav:
-  - HOME: index.md
-  - Inverse Problem:
-      - 개요: inverse_problem/index.md
-  - Posts:
-      - Signal and Noise: _posts/2025-08-23-signal_and_noise/post.md
-
-
+  - 홈: index.md
+  - Research:
+      - research/index.md
+      - LLM Evaluation:
+          - research/llm-evaluation/signal-and-noise.md
+  - Notes:
+      - notes/index.md
+      - Inverse Problem: notes/inverse-problem.md
