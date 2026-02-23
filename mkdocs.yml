@@ -97,3 +97,6 @@ nav:
       - inverse_problem/index.md
       - 01. Introduction: inverse_problem/01.introduction.md
       - 02. Fredholm Integral Equation: inverse_problem/02.Fredholm_integral_equation.md
+  - Unlearning:
+      - unlearning/index.md
+      - Understanding Black-box Predictions via Influence Functions: unlearning/Understanding Black-box Predictions via Influence Functions.md
