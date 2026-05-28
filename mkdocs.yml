@@ -5,23 +5,27 @@ repo_url: https://github.com/kangnok-choi/kangnok-choi.github.io
 repo_name: kangnok-choi/kangnok-choi.github.io
 edit_uri: edit/main/docs/
 
+watch:
+  - overrides
+
 theme:
   name: material
   language: ko
+  custom_dir: overrides
   palette:
-    # Light mode
+    # Light mode (parchment)
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: 다크 모드로 전환
-    # Dark mode  
+    # Dark mode (ink)
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: 라이트 모드로 전환
   features:
     - navigation.instant        # 즉시 로딩
@@ -41,9 +45,7 @@ theme:
     - content.action.view       # 보기 버튼
   icon:
     repo: fontawesome/brands/github
-  font:
-    text: Noto Sans KR
-    code: Fira Code
+  font: false   # 사용자 정의 폰트는 overrides/main.html 에서 로드
 
 plugins:
   - search:
@@ -90,13 +92,12 @@ extra_javascript:
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
-  - Inverse problem:
-      - inverse_problem/index.md
-      - 01. Introduction: inverse_problem/01.introduction.md
-      - 02. Fredholm Integral Equation: inverse_problem/02.Fredholm_integral_equation.md
-  - Unlearning:
-      - unlearning/index.md
-      - Understanding Black-box Predictions via Influence Functions: unlearning/Understanding Black-box Predictions via Influence Functions.md
+  - Circuits:
+    - circuits/index.md
+    - Induction Heads: circuits/induction-heads.md
+  - Multilingual Circuit:
+    - multilingual_circuit/index.md

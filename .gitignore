@@ -1,0 +1,47 @@
+# Claude / AI assistant
+.claude/
+.claude-*
+CLAUDE.local.md
+.anthropic/
+.aider*
+.cursor/
+
+# MkDocs
+site/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+venv*/
+.venv*/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+pyvenv.cfg
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs / temp
+*.log
+*.tmp
+.tmp/
