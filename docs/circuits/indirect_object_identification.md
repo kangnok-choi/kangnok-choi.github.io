@@ -8,7 +8,7 @@ title: Indirect Object Identification
 
 ## 1. Indirect Object Identification
 
-Indirect Object Identification (IOI) task란?: 간접목적어 (indirect object)를 식별하는 task로, 고정된 템플릿을 사용함으로써 변수를 통제하는 것이 목적으로,
+Indirect Object Identification (IOI) task란?: 간접목적어 (indirect object)를 식별하는 task이다. 고정된 템플릿을 사용함으로써 변수를 통제하는 것이 목적으로,
 > When <ruby class="io">Mary<rt>IO</rt></ruby> and <ruby class="s">John<rt>S1</rt></ruby> went to the store, <ruby class="s">John<rt>S2</rt></ruby> gave a drink to ____
 
 와 같이 마지막 자리에 들어올 올바른 단어를 고르는 것을 의미한다. 이 연구에서는 IO 토큰과 S 토큰 사이의 logit difference를 주요 metric으로 활용한다. 즉, $\mathrm{logit(IO) - logit(S)}$의 계산을 통해 IO 토큰을 S 토큰보다 선호하면 양수, S토큰을 선호하면 음수가 된다.
