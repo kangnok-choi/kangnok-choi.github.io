@@ -98,6 +98,5 @@ nav:
   - Home: index.md
   - Circuits:
     - circuits/index.md
-    - Induction Heads: circuits/induction-heads.md
-  - Multilingual Circuit:
-    - multilingual_circuit/index.md
+    - Indirect Objective Identification: circuits/indirect_object_identification.md
+  - Multilingual Circuit: multilingual_circuit/index.md
