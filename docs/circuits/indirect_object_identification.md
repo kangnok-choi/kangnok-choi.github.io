@@ -1,5 +1,5 @@
 ---
-title: A Circuit for Indirect Object Identification In GPT-2 Small
+title: Indirect Object Identification
 ---
 
 # Indirect Object Identification
