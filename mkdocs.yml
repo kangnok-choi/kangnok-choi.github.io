@@ -96,19 +96,17 @@ extra_css:
 
 nav:
   - Home: index.md
-  - 개인연구:
-    - Minjun:
-      - minjun/index.md
-      - Circuits:
-        - minjun/circuits/index.md
-        - Indirect Objective Identification: minjun/circuits/indirect_object_identification.md
-      - Multilingual Circuit: minjun/multilingual_circuit/index.md
-    - Inho:
-      - inho/index.md
-      - World Model: inho/world_model/index.md
-    - Wonjun:
-      - wonjun/index.md
-      - Dependency Parsing: wonjun/dependency_parsing/index.md
-  - 연구그룹:
-    - Multilingual Research Group: multilingual_research_group/index.md
-    - World Model Group: world_model_group/index.md
+  - Minjun:
+    - minjun/index.md
+    - Circuits:
+      - minjun/circuits/index.md
+      - Indirect Objective Identification: minjun/circuits/indirect_object_identification.md
+    - Multilingual Circuit: minjun/multilingual_circuit/index.md
+  - Inho:
+    - inho/index.md
+    - World Model: inho/world_model/index.md
+  - Wonjun:
+    - wonjun/index.md
+    - Dependency Parsing: wonjun/dependency_parsing/index.md
+  - Multilingual Research Group: multilingual_research_group/index.md
+  - World Model Group: world_model_group/index.md

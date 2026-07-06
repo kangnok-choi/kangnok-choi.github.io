@@ -211,29 +211,9 @@ body, .md-main, .md-container {
 .md-header__topic:first-child { font-weight: 600; }
 
 /* Tabs */
-.md-tabs {
-  background: var(--bg);
-  color: var(--ink-3);
-  border-bottom: 1px solid var(--rule);
-}
-.md-tabs__list { padding-left: 0; }
-.md-tabs__link {
-  font-size: 0.74rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  opacity: 1;
-  color: var(--ink-3);
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-.md-tabs__link:hover { color: var(--ink); }
-.md-tabs__link--active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
+/* 상단 탭 바 숨김 — nav.tabs 기능은 사이드바를 인물별로 격리하는 데만 사용,
+   인물/그룹 간 전환은 Home(좌상단 "최강녹" → Home)의 카드로. */
+.md-tabs { display: none; }
 
 /* Search */
 .md-search__form {
