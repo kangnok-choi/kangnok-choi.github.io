@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="wmbg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3f6fc"/>
+      <stop offset="1" stop-color="#dbe6f7"/>
+    </linearGradient>
+    <pattern id="wmdots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e4ea3" fill-opacity="0.08"/>
+    </pattern>
+    <radialGradient id="wmstate" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#1e4ea3" stop-opacity="0.9"/>
+      <stop offset="0.6" stop-color="#1e4ea3" stop-opacity="0.3"/>
+      <stop offset="1"   stop-color="#1e4ea3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="240" fill="url(#wmbg)"/>
+  <rect width="1200" height="240" fill="url(#wmdots)"/>
+
+  <!-- latent state rollout : s_t -> s_t+1 -> s_t+2 -->
+  <g fill="none" stroke="#1e4ea3" stroke-width="1.3" stroke-opacity="0.5" stroke-linecap="round">
+    <path d="M 690 120 L 830 120"/>
+    <path d="M 890 120 L 1030 120"/>
+  </g>
+  <g>
+    <g transform="translate(660, 120)"><circle r="46" fill="url(#wmstate)"/><circle r="16" fill="#1e4ea3" fill-opacity="0.85"/></g>
+    <g transform="translate(860, 120)"><circle r="46" fill="url(#wmstate)"/><circle r="16" fill="#1e4ea3" fill-opacity="0.85"/></g>
+    <g transform="translate(1060, 120)"><circle r="46" fill="url(#wmstate)"/><circle r="16" fill="#1e4ea3" fill-opacity="0.85"/></g>
+  </g>
+
+  <!-- action arrows above the transitions -->
+  <g fill="#1e4ea3" fill-opacity="0.6">
+    <path d="M 826 120 l -10 -5 v 10 z"/>
+    <path d="M 1026 120 l -10 -5 v 10 z"/>
+  </g>
+
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="#1e4ea3" fill-opacity="0.6" letter-spacing="1">
+    <text x="660"  y="196" text-anchor="middle">s_t</text>
+    <text x="860"  y="196" text-anchor="middle">s_t+1</text>
+    <text x="1060" y="196" text-anchor="middle">s_t+2</text>
+  </g>
+</svg>

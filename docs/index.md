@@ -32,18 +32,25 @@ hide:
       <p class="profile-card__kw">Dependency Parsing</p>
     </div>
   </a>
+  <a class="profile-card" href="junghun/">
+    <div class="profile-card__cover" style="background-image: url('junghun/cover_images/profile.svg')"></div>
+    <div class="profile-card__body">
+      <h2 class="profile-card__name">Junghun</h2>
+      <p class="profile-card__kw">World Model</p>
+    </div>
+  </a>
 </div>
 
 ## 연구그룹
 
 <div class="profile-grid" markdown="0">
-  <a class="profile-card" href="multilingual_research_group/">
+  <a class="profile-card profile-card--group" href="multilingual_research_group/">
     <div class="profile-card__cover" style="background-image: url('multilingual_research_group/cover_images/profile.svg')"></div>
     <div class="profile-card__body">
       <h2 class="profile-card__name">Multilingual<br>Research Group</h2>
     </div>
   </a>
-  <a class="profile-card" href="world_model_group/">
+  <a class="profile-card profile-card--group" href="world_model_group/">
     <div class="profile-card__cover" style="background-image: url('world_model_group/cover_images/profile.svg')"></div>
     <div class="profile-card__body">
       <h2 class="profile-card__name">World Model<br>Group</h2>

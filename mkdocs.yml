@@ -108,5 +108,8 @@ nav:
   - Wonjun:
     - wonjun/index.md
     - Dependency Parsing: wonjun/dependency_parsing/index.md
+  - Junghun:
+    - junghun/index.md
+    - World Model: junghun/world_model/index.md
   - Multilingual Research Group: multilingual_research_group/index.md
   - World Model Group: world_model_group/index.md
