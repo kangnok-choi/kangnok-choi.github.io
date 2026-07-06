@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="mrgbg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3f6fc"/>
+      <stop offset="1" stop-color="#dbe6f7"/>
+    </linearGradient>
+    <pattern id="mrgdots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e4ea3" fill-opacity="0.08"/>
+    </pattern>
+    <radialGradient id="mrghub" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#1e4ea3" stop-opacity="0.95"/>
+      <stop offset="0.6" stop-color="#1e4ea3" stop-opacity="0.35"/>
+      <stop offset="1"   stop-color="#1e4ea3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="240" fill="url(#mrgbg)"/>
+  <rect width="1200" height="240" fill="url(#mrgdots)"/>
+
+  <!-- researchers (language tokens) gathered around a shared hub -->
+  <g font-family="JetBrains Mono, monospace" font-weight="600" fill="#1e4ea3">
+    <g transform="translate(650, 55)">
+      <rect x="-22" y="-18" width="44" height="32" rx="3" fill="#ffffff" stroke="#1e4ea3" stroke-opacity="0.5"/>
+      <text x="0" y="6" text-anchor="middle" font-size="18">가</text>
+    </g>
+    <g transform="translate(650, 185)">
+      <rect x="-22" y="-18" width="44" height="32" rx="3" fill="#ffffff" stroke="#1e4ea3" stroke-opacity="0.5"/>
+      <text x="0" y="6" text-anchor="middle" font-size="18">A</text>
+    </g>
+    <g transform="translate(1090, 55)">
+      <rect x="-22" y="-18" width="44" height="32" rx="3" fill="#ffffff" stroke="#1e4ea3" stroke-opacity="0.5"/>
+      <text x="0" y="6" text-anchor="middle" font-size="18">中</text>
+    </g>
+    <g transform="translate(1090, 185)">
+      <rect x="-22" y="-18" width="44" height="32" rx="3" fill="#ffffff" stroke="#1e4ea3" stroke-opacity="0.5"/>
+      <text x="0" y="6" text-anchor="middle" font-size="18">あ</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#1e4ea3" stroke-width="1.1" stroke-opacity="0.5" stroke-linecap="round">
+    <path d="M 675 60  Q 800 90  868 120"/>
+    <path d="M 675 180 Q 800 150 868 120"/>
+    <path d="M 1065 60  Q 940 90  872 120"/>
+    <path d="M 1065 180 Q 940 150 872 120"/>
+  </g>
+
+  <g transform="translate(870, 120)">
+    <circle r="60" fill="url(#mrghub)"/>
+    <circle r="22" fill="#1e4ea3"/>
+    <circle r="22" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
+  </g>
+
+  <g font-family="JetBrains Mono, monospace" font-size="9" fill="#1e4ea3" fill-opacity="0.55" letter-spacing="2">
+    <text x="870" y="205" text-anchor="middle">RESEARCH GROUP</text>
+  </g>
+</svg>

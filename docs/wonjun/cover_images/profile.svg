@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="wjpbg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#f3f6fc"/>
+      <stop offset="1" stop-color="#dbe6f7"/>
+    </linearGradient>
+    <pattern id="wjpdots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e4ea3" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="480" fill="url(#wjpbg)"/>
+  <rect width="480" height="480" fill="url(#wjpdots)"/>
+
+  <!-- dependency arcs above a row of tokens -->
+  <g fill="none" stroke="#1e4ea3" stroke-linecap="round">
+    <path d="M 190 392 Q 300 150 410 392" stroke-width="1.5" stroke-opacity="0.55"/>
+    <path d="M 70 400 Q 130 320 190 400"  stroke-width="1.4" stroke-opacity="0.5"/>
+    <path d="M 190 400 Q 250 285 310 400" stroke-width="1.4" stroke-opacity="0.5"/>
+    <path d="M 310 400 Q 360 330 410 400" stroke-width="1.4" stroke-opacity="0.5"/>
+  </g>
+  <!-- arrow heads at dependents -->
+  <g fill="#1e4ea3" fill-opacity="0.6">
+    <path d="M 70 400 l 6 -9 h -12 z"/>
+    <path d="M 310 400 l 6 -9 h -12 z"/>
+    <path d="M 410 400 l 6 -9 h -12 z"/>
+  </g>
+  <!-- token boxes -->
+  <g>
+    <g transform="translate(70, 418)"><rect x="-20" y="0" width="40" height="30" rx="4" fill="#ffffff" stroke="#1e4ea3" stroke-opacity="0.55"/></g>
+    <g transform="translate(190, 418)"><rect x="-20" y="0" width="40" height="30" rx="4" fill="#1e4ea3" fill-opacity="0.85"/></g>
+    <g transform="translate(310, 418)"><rect x="-20" y="0" width="40" height="30" rx="4" fill="#ffffff" stroke="#1e4ea3" stroke-opacity="0.55"/></g>
+    <g transform="translate(410, 418)"><rect x="-20" y="0" width="40" height="30" rx="4" fill="#ffffff" stroke="#1e4ea3" stroke-opacity="0.55"/></g>
+  </g>
+</svg>
