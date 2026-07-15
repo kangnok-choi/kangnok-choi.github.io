@@ -111,5 +111,7 @@ nav:
   - Junghun:
     - junghun/index.md
     - World Model: junghun/world_model/index.md
-  - Multilingual Research Group: multilingual_research_group/index.md
+  - Multilingual Research Group:
+    - multilingual_research_group/index.md
+    - QuRating: multilingual_research_group/qurating.md
   - World Model Group: world_model_group/index.md
