@@ -1,5 +1,6 @@
 # Claude / AI assistant
-.claude/
+.claude/*
+!.claude/skills/
 .claude-*
 CLAUDE.local.md
 .anthropic/
