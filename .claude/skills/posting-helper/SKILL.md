@@ -36,8 +36,10 @@ user needs from where they are in the process.
    user (= branch). Ask only for what's missing.
    - Target: `docs/<user>/<category>/` for personal posts, `docs/<group>/` for group
      posts (e.g. `docs/multilingual_research_group/`, `docs/world_model_group/`).
+   - Post md files live in the `posts/` subdirectory of the target; `index.md` stays at
+     the target root.
 2. **Check/create the branch** (per ground rules).
-3. **Create the page** at `docs/<target>/<slug>.md` (lowercase kebab-case slug).
+3. **Create the page** at `docs/<target>/posts/<slug>.md` (lowercase kebab-case slug).
    The page must contain ONLY this structure — no template sections, no placeholder
    prompts; the body is the user's to write:
 
@@ -71,7 +73,8 @@ Goal: check the user's draft against the original paper.
 ## 3. Image localization
 
 External URLs (especially `github.com/user-attachments/assets/...`) can break. Download
-them to `docs/<target>/post_images/<slug>/` and replace with:
+them to `docs/<target>/posts/post_images/<slug>/` (next to the post md file, so relative
+paths resolve) and replace with:
 
 ```markdown
 <figure markdown="span"> ![alt](post_images/<slug>/<file>){ width="90%" }</figure>

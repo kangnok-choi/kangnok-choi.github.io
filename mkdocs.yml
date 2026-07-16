@@ -100,8 +100,8 @@ nav:
     - minjun/index.md
     - Circuits:
       - minjun/circuits/index.md
-      - Indirect Objective Identification: minjun/circuits/indirect-object-identification.md
-      - Automated Circuit Discovery: minjun/circuits/automated-circuit-discovery.md
+      - Indirect Objective Identification: minjun/circuits/posts/indirect-object-identification.md
+      - Automated Circuit Discovery: minjun/circuits/posts/automated-circuit-discovery.md
     - Multilingual Circuit: minjun/multilingual_circuit/index.md
   - Inho:
     - inho/index.md
@@ -114,5 +114,5 @@ nav:
     - World Model: junghun/world_model/index.md
   - Multilingual Research Group:
     - multilingual_research_group/index.md
-    - QuRating: multilingual_research_group/qurating.md
+    - QuRating: multilingual_research_group/posts/qurating.md
   - World Model Group: world_model_group/index.md

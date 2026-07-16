@@ -9,7 +9,7 @@ hide:
 Transformer 해체분석쇼
 
 <div class="post-grid" markdown="0">
-  <a class="post-card" href="indirect-object-identification/">
+  <a class="post-card" href="posts/indirect-object-identification/">
     <div class="post-card__cover" style="background-image: url('cover_images/induction-heads.svg')"></div>
     <div class="post-card__body">
       <div class="post-card__meta">Wang et al. 2023 ICLR</div>
@@ -17,7 +17,7 @@ Transformer 해체분석쇼
       <p class="post-card__desc">IOI</p>
     </div>
   </a>
-  <a class="post-card" href="automated-circuit-discovery/">
+  <a class="post-card" href="posts/automated-circuit-discovery/">
     <div class="post-card__cover" style="background-image: url('cover_images/automated-circuit-discovery.svg')"></div>
     <div class="post-card__body">
       <div class="post-card__meta">Conmy et al. 2023 NeurIPS</div>
