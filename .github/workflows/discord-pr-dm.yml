@@ -1,0 +1,81 @@
+name: Discord PR DM
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send DM to reviewers
+        env:
+          BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          USER_IDS: ${{ secrets.DISCORD_USER_IDS }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          # 메시지 본문 구성 (제목에 특수문자 있어도 안전하게 jq로 조립)
+          # 최강록 어록(PR 버전) 랜덤 선택
+          quotes=(
+            "나야, PR."
+            "수고했다, 글쓰기 인간. 오늘만큼은 좀 글쓰기에서 쉬어라."
+            "그래, 그냥 그분들 대신 내가 리뷰하러 나와 있다고 생각하고 열심히 하자."
+            "자만하지 않겠습니다, 예. 리뷰 꼼꼼히 하겠습니다."
+            "리뷰 반영해서 다시 올렸는데, 좋았다."
+            "다 머지해 버리겠다. 거기 브랜치에 있는 건 다 나의 머지 재료들."
+            "거봐, PR 올리기 잘했지."
+            "이게 하나 올라가면 또 하나 올라가고 싶어요. PR이."
+            "아무것도 안 하면 아무 일도 안 일어난다고 했는데... 그래서 PR 열었습니다, 예."
+            "코딩은 그냥 제 삶의 51% 정도. 이 PR로 52%가 되었습니다."
+            "욕망의 커밋 인간이라고."
+            "이왕 하는 거 신나게 커밋해보자. 다 머지해, 끝날 때까지."
+            "내 자아가, '다른 거 하지 마. 너는 머지해야 돼.' 그래서, 머지했죠."
+            "유치해(웃음)."
+          )
+          quote="${quotes[$((RANDOM % ${#quotes[@]}))]}"
+
+          content=$(printf '🍳 "%s"\n\n**#%s %s**\n작성자: %s · 레포: %s\n%s' \
+            "$quote" "$PR_NUMBER" "$PR_TITLE" "$PR_AUTHOR" "$REPO" "$PR_URL")
+
+          # 콤마로 구분된 유저 ID 목록을 순회하며 각자에게 DM 전송
+          failed=0
+          IFS=', ' read -ra IDS <<< "$USER_IDS"
+          for uid in "${IDS[@]}"; do
+            [ -z "$uid" ] && continue
+
+            # 1) 해당 유저와의 DM 채널 생성 (이미 있으면 기존 채널 반환)
+            channel_id=$(curl -sf -X POST "https://discord.com/api/v10/users/@me/channels" \
+              -H "Authorization: Bot ${BOT_TOKEN}" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg r "$uid" '{recipient_id: $r}')" \
+              | jq -r '.id') || channel_id=""
+
+            if [ -z "$channel_id" ] || [ "$channel_id" = "null" ]; then
+              echo "::warning::유저 ${uid} DM 채널 생성 실패 — DM 허용 설정/공용 서버 여부 확인" >&2
+              failed=1
+              continue
+            fi
+
+            # 2) DM 전송
+            if curl -sf -X POST "https://discord.com/api/v10/channels/${channel_id}/messages" \
+              -H "Authorization: Bot ${BOT_TOKEN}" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg c "$content" '{content: $c}')" \
+              -o /dev/null; then
+              echo "유저 ${uid} DM 전송 완료"
+            else
+              echo "::warning::유저 ${uid} DM 전송 실패" >&2
+              failed=1
+            fi
+          done
+
+          exit $failed
