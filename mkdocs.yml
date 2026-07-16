@@ -100,7 +100,7 @@ nav:
     - minjun/index.md
     - Circuits:
       - minjun/circuits/index.md
-      - Indirect Objective Identification: minjun/circuits/indirect_object_identification.md
+      - Indirect Objective Identification: minjun/circuits/indirect-object-identification.md
       - Automated Circuit Discovery: minjun/circuits/automated-circuit-discovery.md
     - Multilingual Circuit: minjun/multilingual_circuit/index.md
   - Inho:

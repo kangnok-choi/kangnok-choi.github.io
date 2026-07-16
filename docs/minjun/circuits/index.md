@@ -9,7 +9,7 @@ hide:
 Transformer 해체분석쇼
 
 <div class="post-grid" markdown="0">
-  <a class="post-card" href="indirect_object_identification/">
+  <a class="post-card" href="indirect-object-identification/">
     <div class="post-card__cover" style="background-image: url('cover_images/induction-heads.svg')"></div>
     <div class="post-card__body">
       <div class="post-card__meta">Wang et al. 2023 ICLR</div>
