@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="acdc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fafbfd"/>
+      <stop offset="1" stop-color="#e8eef9"/>
+    </linearGradient>
+    <pattern id="acdc-dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e4ea3" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="360" fill="url(#acdc-bg)"/>
+  <rect width="600" height="360" fill="url(#acdc-dots)"/>
+
+  <!-- computational graph: faint pruned edges, bold discovered circuit -->
+  <g stroke="#1e4ea3" fill="none" stroke-linecap="round">
+    <!-- pruned edges (dashed, faint) -->
+    <g stroke-width="1.2" stroke-opacity="0.22" stroke-dasharray="3 4">
+      <path d="M 300 72 L 158 128"/>
+      <path d="M 300 72 L 442 128"/>
+      <path d="M 150 152 L 242 208"/>
+      <path d="M 150 152 L 342 209"/>
+      <path d="M 250 152 L 158 208"/>
+      <path d="M 450 152 L 358 208"/>
+      <path d="M 450 152 L 258 209"/>
+      <path d="M 150 232 L 288 292"/>
+      <path d="M 250 232 L 292 288"/>
+      <path d="M 450 232 L 312 292"/>
+    </g>
+    <!-- kept circuit edges (bold) -->
+    <g stroke-width="2.4" stroke-opacity="0.9">
+      <path d="M 300 72 L 254 126"/>
+      <path d="M 250 152 L 344 206"/>
+      <path d="M 350 232 L 304 286"/>
+    </g>
+  </g>
+  <!-- arrowheads on circuit edges -->
+  <g fill="#1e4ea3" fill-opacity="0.9">
+    <polygon points="254,126 262,123 258,131"/>
+    <polygon points="344,206 336,204 340,212"/>
+    <polygon points="304,286 312,283 308,291"/>
+  </g>
+
+  <!-- prune marks on cut edges -->
+  <g font-family="JetBrains Mono, monospace" font-size="11" fill="#1e4ea3" fill-opacity="0.45" text-anchor="middle">
+    <text x="380" y="102">×</text>
+    <text x="196" y="185">×</text>
+    <text x="404" y="268">×</text>
+  </g>
+
+  <!-- nodes -->
+  <g>
+    <!-- pruned nodes: light outline -->
+    <g fill="#fafbfd" stroke="#1e4ea3" stroke-opacity="0.35" stroke-width="1.4">
+      <circle cx="150" cy="140" r="12"/>
+      <circle cx="450" cy="140" r="12"/>
+      <circle cx="150" cy="220" r="12"/>
+      <circle cx="250" cy="220" r="12"/>
+      <circle cx="450" cy="220" r="12"/>
+    </g>
+    <!-- circuit nodes: solid accent -->
+    <g fill="#1e4ea3" fill-opacity="0.85">
+      <circle cx="300" cy="60" r="12"/>
+      <circle cx="250" cy="140" r="12"/>
+      <circle cx="350" cy="220" r="12"/>
+      <circle cx="300" cy="298" r="12"/>
+    </g>
+  </g>
+
+  <!-- labels -->
+  <g font-family="JetBrains Mono, monospace" fill="#1e4ea3" letter-spacing="1">
+    <text x="330" y="64" font-size="9" fill-opacity="0.7">input</text>
+    <text x="330" y="302" font-size="9" fill-opacity="0.7">logits</text>
+    <text x="452" y="330" font-size="10" font-weight="600" fill-opacity="0.6">ACDC</text>
+    <text x="60" y="330" font-size="9" fill-opacity="0.55">prune edge if ΔKL ≤ τ</text>
+  </g>
+</svg>
