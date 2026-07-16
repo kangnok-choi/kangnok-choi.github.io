@@ -10,7 +10,7 @@ hide:
 
 <div class="post-grid" markdown="0">
   <a class="post-card" href="qurating/">
-    <div class="post-card__cover" style="background-image: url('cover_images/cover.svg')"></div>
+    <div class="post-card__cover" style="background-image: url('cover_images/qurating.svg')"></div>
     <div class="post-card__body">
       <div class="post-card__meta">Wettig et al. 2024 ICML</div>
       <h3 class="post-card__title">QuRating</h3>

@@ -632,9 +632,15 @@ body, .md-main, .md-container {
   padding: 0 !important;
   border: none !important;
   color: var(--ink);
+  word-break: keep-all;     /* 단어 중간에서 줄바꿈 금지 (Multilin\ngual 방지) */
+  overflow-wrap: normal;
 }
 .md-typeset .profile-card__name::before,
 .profile-card__name::before { display: none !important; content: none !important; }
+
+/* 그룹 이름은 긴 단어(Multilingual)가 있어 폰트를 살짝 줄여 카드 안에 들어오게 */
+.md-typeset .profile-card--group .profile-card__name,
+.profile-card--group .profile-card__name { font-size: 1.2rem; }
 
 .profile-card__kw {
   font-family: var(--font-mono);
