@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="snl-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3f6fc"/>
+      <stop offset="1" stop-color="#dbe6f7"/>
+    </linearGradient>
+    <pattern id="snl-dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e4ea3" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="360" fill="url(#snl-bg)"/>
+  <rect width="600" height="360" fill="url(#snl-dots)"/>
+
+  <!-- two languages' representations, as neuron-dimension stacks -->
+  <text x="190" y="58" font-family="JetBrains Mono, monospace" font-size="14" font-weight="600" fill="#1e4ea3" text-anchor="middle">L1</text>
+  <text x="410" y="58" font-family="JetBrains Mono, monospace" font-size="14" font-weight="600" fill="#1e4ea3" text-anchor="middle">L2</text>
+
+  <!-- shared (informative) neuron indices: 1, 4, 6 (0-indexed) -->
+  <g>
+    <!-- connectors for shared neurons, drawn first so dots sit on top -->
+    <g stroke="#1e4ea3" stroke-width="1.6" stroke-dasharray="5 4">
+      <line x1="190" y1="112" x2="410" y2="112" stroke-opacity="0.55"/>
+      <line x1="190" y1="202" x2="410" y2="202" stroke-opacity="0.55"/>
+      <line x1="190" y1="262" x2="410" y2="262" stroke-opacity="0.55"/>
+    </g>
+
+    <!-- L1 stack -->
+    <g>
+      <circle cx="190" cy="82"  r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="190" cy="112" r="8" fill="#1e4ea3" fill-opacity="0.85"/>
+      <circle cx="190" cy="142" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="190" cy="172" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="190" cy="202" r="8" fill="#1e4ea3" fill-opacity="0.85"/>
+      <circle cx="190" cy="232" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="190" cy="262" r="8" fill="#1e4ea3" fill-opacity="0.85"/>
+      <circle cx="190" cy="292" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+    </g>
+
+    <!-- L2 stack -->
+    <g>
+      <circle cx="410" cy="82"  r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="410" cy="112" r="8" fill="#1e4ea3" fill-opacity="0.85"/>
+      <circle cx="410" cy="142" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="410" cy="172" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="410" cy="202" r="8" fill="#1e4ea3" fill-opacity="0.85"/>
+      <circle cx="410" cy="232" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+      <circle cx="410" cy="262" r="8" fill="#1e4ea3" fill-opacity="0.85"/>
+      <circle cx="410" cy="292" r="7" fill="#1e4ea3" fill-opacity="0.12"/>
+    </g>
+  </g>
+
+  <text x="300" y="330" font-family="JetBrains Mono, monospace" font-size="11" fill="#1e4ea3" fill-opacity="0.6" text-anchor="middle">shared neurons</text>
+</svg>
