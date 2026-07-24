@@ -4,9 +4,10 @@ description: >
   Helper for posting paper-analysis articles on this blog (kangnok-choi.github.io, MkDocs).
   Use for requests like "start a new paper post", "create the page", "check my draft
   against the paper", "localize images", "open a PR". Covers exactly four jobs:
-  new-post page setup (frontmatter + title + paper header only), fact verification
-  against the original paper, image localization, and PR help. Each user works on
-  their own branch and publishes via PR.
+  new-post page setup (frontmatter + title + paper header, thumbnail SVG via the
+  thumbnail-maker skill, and index.md card registration), fact verification against
+  the original paper, image localization, and PR help. Each user works on their own
+  branch and publishes via PR.
 ---
 
 # Posting Helper
@@ -53,7 +54,14 @@ user needs from where they are in the process.
    ##### *Author et al.* Full Paper Title *(Year Venue)*
    ```
 
-4. Tell the user the page is ready for their draft.
+4. **Add a thumbnail + register the card in `index.md`.** The group/category index page
+   maintains its post grid by hand (`docs/<target>/index.md`) — a new post does not show
+   up there automatically, even once the `.md` file exists.
+   - Use the `thumbnail-maker` skill to create `docs/<target>/cover_images/<slug>.svg`.
+   - Add a matching `<a class="post-card">` entry to `docs/<target>/index.md` (copy the
+     structure of an existing card: cover path, meta line = `Author et al. Year Venue`,
+     title, one-line desc, href = `posts/<slug>/`).
+5. Tell the user the page is ready for their draft.
 
 ## 2. Fact verification
 
